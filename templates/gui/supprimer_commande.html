@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Supprimer Commande </title>
+</head>
+<body>
+	<h2>Supprimer Commande</h2>
+	<form method="post">
+	{% csrf_token %}
+		Etes-vous sur de vouloir supprimer la commande {{ object.id  }} du client "{{object.client.nom}} {{object.client.prenom}}" ?
+		<input type="submit" value="Confirmer"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Liste des produits  </title>
+</head>
+<body>
+	<h2>Liste des produits</h2>
+	<br>
+	<a href= "/"> <button>Retour</button> </a>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Nom</th>
+		<th>Prix</th>
+		<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for object in object_list %}
+
+		<tr>
+		<td> <a href= "/produits/{{object.idproduit}}">{{ object.idproduit }}</td>
+		<td> {{ object.nom }} </td>
+		<td> {{ object.prixunitaire }} </td>
+		<td> {{ object.idtypeproduit.nom}}</td>
+		</tr>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+	</pre>
+</body>
+</html>

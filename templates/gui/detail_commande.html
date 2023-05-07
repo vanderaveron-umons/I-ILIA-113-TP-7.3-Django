@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Détails de la commande  </title>
+</head>
+<body>
+	<h2>Commande {{object.idcommande}} </h2>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Date</th>
+		<th>Commentaire</th>
+		<th>Client</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td> {{ object.idcommande }} </td>
+		<td> {{ object.datec }} </td>
+		<td> {{ object.commentaire }} </td>
+		<td> <a href= "/clients/{{object.ideclient.idclient}}">{{ object.idclient.nom }} {{ object.idclient.prenom }}</a></td>
+		</tr>
+	</tbody>
+	</table>
+	</pre>
+	<a href= "/detailscommande/{{ object.idcommande }}"> <button>Détails de la commande</button></a>
+	<a href= "/commandes/"> <button>Retour à la liste</button></a>
+</body>
+</html>

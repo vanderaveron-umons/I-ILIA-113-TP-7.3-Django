@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Supprimer Client </title>
+</head>
+<body>
+	<h2>Supprimer Client</h2>
+	<form method="post">
+	{% csrf_token %}
+		Etes-vous sur de vouloir supprimer le client {{ object.id  }} "{{object.nom}} {{object.prenom}}" ?
+		<input type="submit" value="Confirmer"/>
+	</form>
+</body>
+</html>

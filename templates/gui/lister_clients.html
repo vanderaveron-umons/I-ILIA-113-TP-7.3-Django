@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Liste des Clients </title>
+</head>
+<body>
+	<h2>Clients</h2>
+	<a href= "/clients/create/"> <button>Ajouter client</button> </a>
+	<br>
+	<a href= "/"> <button>Retour</button> </a>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Nom</th>
+		<th>Prenom</th>
+		<th>Adresse</th>
+		<th>Code Postal</th>
+		<th>Ville</th>
+		<th>Email</th>	
+		</tr>
+	</thead>
+	<tbody>
+		{% for client in object_list %}
+		<tr>
+		<td> <a href= "/clients/{{client.idclient}}">{{client.idclient}}</a></td>
+		<td> {{ client.nom }} </td>
+		<td> {{ client.prenom }} </td>
+		<td> {{ client.adresse }} </td>
+		<td> {{ client.codepostal }} </td>
+		<td> {{ client.ville }} </td>
+		<td> {{ client.email }} </td>
+		</tr>
+		{% endfor %}
+	</tbody>
+	</table>
+	</pre>
+</body>
+</html>

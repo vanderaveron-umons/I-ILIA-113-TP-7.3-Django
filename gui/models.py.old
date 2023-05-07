@@ -1,0 +1,21 @@
+from django.db import models
+
+# Create your models here.
+
+
+class Client(models.Model):
+    nom = models.CharField(max_length = 512)
+    prenom  = models.CharField(max_length = 512)
+    adresse  = models.CharField(max_length = 512)
+    codePostal = models.PositiveIntegerField()
+    ville  = models.CharField(max_length = 512)
+    email  = models.CharField(max_length = 512)
+    class Meta:
+        db_table = 'Client'
+        
+class Commande(models.Model):
+    date  = models.CharField(max_length = 512)
+    commentaire  = models.CharField(max_length = 512)
+    client = models.ForeignKey('Client', on_delete = models.CASCADE)
+    class Meta:
+        db_table = 'Commande'

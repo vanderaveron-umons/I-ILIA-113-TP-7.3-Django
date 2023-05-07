@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Détails du produit  </title>
+</head>
+<body>
+	<h2>Produit {{object.idproduit}} </h2>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Nom</th>
+		<th>Prix</th>
+		<th>Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td> {{ object.idproduit }} </td>
+		<td> {{ object.nom }} </td>
+		<td> {{ object.prixunitaire }} </td>
+		<td> {{ object.idtypeproduit.nom}}</td>
+		</tr>
+	</tbody>
+	</table>
+	</pre>
+	<a href= "/produits/"> <button>Retour à la liste</button></a>
+</body>
+</html>

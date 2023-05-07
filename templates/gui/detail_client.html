@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Détails du client  </title>
+</head>
+<body>
+	<h2>Client {{ object.idclient }}</h2>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>Nom</th>
+		<th>Prenom</th>
+		<th>Adresse</th>
+		<th>Code Postal</th>
+		<th>Ville</th>
+		<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td> {{ object.nom }} </td>
+		<td> {{ object.prenom }} </td>
+		<td> {{ object.adresse }} </td>
+		<td> {{ object.codepostal }} </td>
+		<td> {{ object.ville }} </td>
+		<td> {{ object.email }} </td>
+		</tr>
+	</tbody>
+	</table>
+	</pre>
+	<a href= "/clients/update/{{ object.idclient }}"><button>Mettre à jour</button></a>
+	<a href= "/clients/delete/{{ object.idclient }}"><button>Supprimer</button></a>
+	<a href= "/clients/"> <button>Retour à la liste</button></a>
+</body>
+</html>

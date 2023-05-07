@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Détails de la commande  </title>
+</head>
+<body>
+	<h2>Commande {{object.idcommande.idcommande}} </h2>
+	<pre><table border= "1">
+	<thead>
+		<tr>
+		<th>ID</th>
+		<th>Date Commande</th>
+		<th>Produit</th>
+		<th>Quantité</th>
+		<th>Prix unitaire</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+		<td> {{ object.idcommande.idcommande }} </td>
+		<td> {{ object.idcommande.datec }} </td>
+		<td> {{ object.idproduit.nom }} </td>
+		<td> {{ object.quantite }} </td>
+		<td> {{ object.idproduit.prixunitaire }} </td>
+		</tr>
+	</tbody>
+	</table>
+	</pre>
+	<a href= "/commandes/{{object.idcommande.idcommande}}"> <button>Retour à la commande</button></a>
+</body>
+</html>
